@@ -1,0 +1,13 @@
+# Ignorar todas as pastas venv em qualquer nível
+**/venv/
+
+
+# Ignorar arquivos temporários
+*.log
+*.tmp
+
+# Ignorar arquivos de compilação
+*.pyc
+__pycache__/
+
+

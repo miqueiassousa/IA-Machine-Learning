@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconhecimento de Dígitos Manuscritos</title>
+</head>
+<body>
+    <h2>Carregue uma imagem de um dígito manuscrito</h2>
+    <input type="file" id="image" name="file" accept="image/*">
+    <button onclick="uploadImage()">Enviar</button>
+    <h3>Resultado: <span id="result"></span></h3>
+
+    <script>
+        async function uploadImage() {
+            const file = document.getElementById('image').files[0];  // Obtém o arquivo da input
+            const formData = new FormData();
+            formData.append('file', file);  // Adiciona o arquivo à requisição
+    
+            try {
+                // Envia a imagem para a API Flask
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    body: formData,
+                });
+    
+                // Verifica se a resposta foi bem-sucedida
+                if (response.ok) {
+                    const data = await response.json();  // Converte a resposta para JSON
+                    document.getElementById('result').textContent = data.digit;  // Exibe o dígito previsto
+                } else {
+                    console.error('Erro na requisição:', response.status);
+                    alert('Erro ao enviar a imagem');
+                }
+            } catch (error) {
+                console.error('Erro na função uploadImage:', error);
+                alert('Erro ao enviar a imagem');
+            }
+        }
+    </script>
+    
+</body>
+</html>
