@@ -1,7 +1,3 @@
-# Como Entender Melhor as Redes Neurais
-
-Que ótimo que o projeto está rodando! Agora que você tem o ambiente configurado e funcionando, o próximo passo é entender os conceitos fundamentais das redes neurais e como elas funcionam. As redes neurais são um dos principais tópicos em **inteligência artificial (IA)** e **aprendizado de máquina (machine learning)**, e entender os seus fundamentos vai te ajudar a melhorar sua prática e o uso dessas tecnologias. Aqui estão algumas orientações e recursos para você aprofundar seu conhecimento sobre redes neurais.
-
 ### 1. Conceitos Básicos de Redes Neurais
 
 As redes neurais são sistemas computacionais inspirados no funcionamento do cérebro humano, projetadas para aprender padrões a partir de dados. Aqui estão os conceitos fundamentais que você deve entender:
